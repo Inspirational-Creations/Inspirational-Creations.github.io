@@ -1,22 +1,24 @@
+---
+import "../styles/global.scss";
+
+import HeaderHero from "../components/HeaderHero.astro";
+import NavBar from "../components/NavBar.astro";
+
+const { pageTitle } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<!--  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
 		<meta name="generator" content={Astro.generator} />
-		<title>Inspirational Creations</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
+		<NavBar />
+		<HeaderHero />
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
