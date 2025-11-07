@@ -2,11 +2,17 @@
 import logo from "../assets/Inspirational.webp"
 ---
 
-<nav class="navbar is-fixed-top is-primary">
+<nav class="navbar is-fixed-top is-primary" id="navbar">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
-            <img src={logo.src} alt="Inspriational Creations logo">
-        </div>
+            <img height="300" src={logo.src} alt="Inspriational Creations logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
     <div class="navbar-menu">
         <div class="navbar-start">

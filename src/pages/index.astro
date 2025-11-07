@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 
 import HeaderHero from '../components/HeaderHero.astro';
+import AboutUs from '../components/AboutUs.astro';
+import HowToOrder from '../components/HowToOrder.astro';
 import ProductsList from '../components/ProductsList.astro';
 
 const pageTitle = "Inspirational Creations";
@@ -9,5 +11,9 @@ const pageTitle = "Inspirational Creations";
 
 <Layout pageTitle={pageTitle}>
 	<HeaderHero />
-	<ProductsList />
+	<div class="container is-fluid">
+		<AboutUs />
+		<HowToOrder />
+		<ProductsList />
+	</div>
 </Layout>

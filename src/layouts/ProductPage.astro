@@ -14,13 +14,21 @@ import "../styles/global.scss";
                 <img class="product-image" src={frontmatter.image.src} alt={frontmatter.image.alt}>
             </div>
             <div class="column">
+                <h1 class="title">{frontmatter.title}</h1>
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h4 class="title is-size-5">{frontmatter.price}</h4>
+                        </div>
+                        <div class="level-item">
+                            <span class="tag is-primary is-medium">{frontmatter.category}</span>
+                        </div>
+                    </div>
+                </nav>
                 <div class="content">
-                    <h1>{frontmatter.title}</h1>
-                    <h4>{frontmatter.price}</h4>
-                    <span class="tag is-primary is-medium">{frontmatter.category}</span>
-                    <br>
                     <slot />
                 </div>
+                <a class="button is-primary">Order</a>
             </div>
         </div>
     </div>
