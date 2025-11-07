@@ -1,8 +1,8 @@
 ---
 import "../styles/global.scss";
 
-import HeaderHero from "../components/HeaderHero.astro";
 import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -17,7 +17,24 @@ const { pageTitle } = Astro.props;
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<NavBar />
-		<slot />
+		<div class="not-footer">
+			<NavBar />
+			<slot />
+			<br>
+		</div>
+		<Footer />
 	</body>
 </html>
+
+<style>
+	html, body {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	.not-footer {
+		flex: 1 0 auto;
+	}
+</style>

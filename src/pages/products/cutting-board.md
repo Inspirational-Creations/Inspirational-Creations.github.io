@@ -5,7 +5,9 @@ price: "$1.00"
 image:
     src: "https://inspirational-creations-9996.myshopify.com/cdn/shop/files/5065444599236536174.jpg?v=1762001976"
     alt: "A wooden cutting board with the words \"Smoke Meat Everyday\" etched onto it."
+category: "Wooden"
 ---
+
 This premium wooden cutting board has grilling utensils and a message engraved into it using laser cutting.
 
 # Other Information
