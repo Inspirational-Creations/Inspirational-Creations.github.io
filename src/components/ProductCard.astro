@@ -1,0 +1,25 @@
+---
+const { frontmatter } = Astro.props;
+
+import "../styles/global.scss";
+---
+
+<div class="card">
+    <div class="card-image">
+        <figure class="image">
+        <img
+            src={frontmatter.image.src}
+            alt={frontmatter.image.alt}
+        />
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-4">{frontmatter.title}</p>
+                <p class="title is-6">{frontmatter.price}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

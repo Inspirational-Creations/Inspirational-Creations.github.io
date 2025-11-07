@@ -1,0 +1,10 @@
+---
+import ProductCard from "../components/ProductCard.astro";
+
+const products = Object.values(import.meta.glob('../pages/products/*.md', { eager: true }));
+---
+<div class="container is-fluid">
+    <div class="grid">
+            {products.map(product => <div class="cell"><a href={product.url}><ProductCard frontmatter={product.frontmatter}></a></div>)}
+    </div>
+</div>

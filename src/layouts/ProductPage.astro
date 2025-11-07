@@ -1,0 +1,24 @@
+---
+const { frontmatter } = Astro.props;
+
+import NavBar from "../components/NavBar.astro";
+import ProductCard from "../components/ProductCard.astro";
+
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.scss";
+---
+
+<Layout>
+    <br>
+    <div class="columns">
+        <div class="column is-one-third">
+            <ProductCard frontmatter={frontmatter} />
+        </div>
+        <div class="column">
+            <div class="content">
+                <slot />
+            </div>
+        </div>
+    </div>
+</Layout>
