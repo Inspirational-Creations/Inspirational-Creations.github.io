@@ -1,12 +1,10 @@
 ---
 const { frontmatter } = Astro.props;
-
-console.log(frontmatter.image);
 ---
 
 <div class="card">
     <div class="card-image">
-        <figure class="image">
+        <figure class="image is-square">
         <img
             src={frontmatter.image.src}
             alt={frontmatter.image.alt}
@@ -27,5 +25,8 @@ console.log(frontmatter.image);
     .card {
         max-width: 24rem;
         margin: auto;
+    }
+    img {
+        object-fit: cover;
     }
 </style>

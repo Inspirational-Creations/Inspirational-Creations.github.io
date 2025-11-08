@@ -22,9 +22,6 @@ export async function getStaticPaths() {
 
 const { category } = Astro.params;
 const { products } = Astro.props;
-
-console.log("Category from params:", category);
-console.log("Products:", products);
 ---
 <Layout pageTitle={category}>
   <div class="container is-fluid">

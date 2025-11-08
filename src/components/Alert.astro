@@ -1,0 +1,53 @@
+---
+// Import statement
+import * as Alert from '../content/alert.md';
+
+const Content = Alert.Content;
+
+const visible = Alert.frontmatter.visible ? "" : "hidden";
+
+const hue = (Alert.frontmatter.hue === "red") ? "is-danger" :
+    (Alert.frontmatter.hue === "yellow") ? "is-primary" :
+    (Alert.frontmatter.hue === "green") ? "is-success" :
+    (Alert.frontmatter.hue === "blue") ? "is-info" :
+    (Alert.frontmatter.hue === "purple") ? "is-warning" :
+    "is-danger";
+
+const  brightness = (Alert.frontmatter.brightness === "dark") ? "is-dark" :
+    (Alert.frontmatter.brightness === "light") ? "is-light" :
+    "";
+
+const color = hue + " " +  brightness;
+
+---
+
+<div id="alert" class={visible}>
+    <div class=`notification ${color}`>
+        <button class="delete"></button>
+        <Content />
+    </div>
+</div>
+
+<style>
+    #alert {
+        margin: 0px;
+    }
+    .hidden {
+        display: none;
+    }
+    .notification {
+        border-radius: 0px;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+            const $notification = $delete.parentNode.parentNode;
+
+            $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+            });
+        });
+    });
+</script>
