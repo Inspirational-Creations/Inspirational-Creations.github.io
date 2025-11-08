@@ -1,7 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 
-import "../styles/global.scss";
+console.log(frontmatter.image);
 ---
 
 <div class="card">
@@ -23,3 +23,9 @@ import "../styles/global.scss";
     </div>
 </div>
 
+<style>
+    .card {
+        max-width: 24rem;
+        margin: auto;
+    }
+</style>

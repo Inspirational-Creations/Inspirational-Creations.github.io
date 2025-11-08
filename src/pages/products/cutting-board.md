@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ProductPage.astro"
+layout: "/src/layouts/ProductPage.astro"
 title: "Laser-Cut Wooden Cutting Board"
 price: "$1.00"
 image:

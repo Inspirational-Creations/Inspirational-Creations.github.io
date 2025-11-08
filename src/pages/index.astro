@@ -4,7 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import HeaderHero from '../components/HeaderHero.astro';
 import AboutUs from '../components/AboutUs.astro';
 import HowToOrder from '../components/HowToOrder.astro';
-import ProductsList from '../components/ProductsList.astro';
+import ProductsView from '../components/products/ProductView.astro'
+import ProductsList from '../components/products/ProductsList.astro';
 
 const pageTitle = "Inspirational Creations";
 ---
@@ -14,6 +15,8 @@ const pageTitle = "Inspirational Creations";
 	<div class="container is-fluid">
 		<AboutUs />
 		<HowToOrder />
-		<ProductsList />
+		<ProductsView title="View All Products">
+			<ProductsList />
+		</ProductsView>
 	</div>
 </Layout>

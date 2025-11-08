@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProductCard from "../../components/products/ProductCard.astro";
+import ProductList from "../../components/products/ProductsList.astro";
+import ProductView from "../../components/products/ProductView.astro"
+
+export async function getStaticPaths() {
+  const allProducts = Object.values(import.meta.glob('../products/*.md', { eager: true }));
+
+  const uniqueCategories = [...new Set(allProducts.map((product: any) => product.frontmatter.category).flat())];
+
+  return uniqueCategories.map((category) => {
+    const filteredProducts = allProducts.filter((product: any) => 
+      product.frontmatter.category === category
+    );
+    return {
+      params: { category },
+      props: { products: filteredProducts },
+    };
+  });
+}
+
+const { category } = Astro.params;
+const { products } = Astro.props;
+
+console.log("Category from params:", category);
+console.log("Products:", products);
+---
+<Layout pageTitle={category}>
+  <div class="container is-fluid">
+    <ProductView title=`All products in the category: ${category}`>
+      {products.map((product: any) => 
+        <div class="cell">
+          <a href={product.url}>
+            <ProductCard frontmatter={product.frontmatter}/>
+          </a>
+        </div>
+      )}
+    </ProductView>
+  </div>
+</Layout>

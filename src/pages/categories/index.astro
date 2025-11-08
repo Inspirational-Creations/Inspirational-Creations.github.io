@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProductView from "../../components/products/ProductView.astro";
+
+const allProducts = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
+const categories = [...new Set(allProducts.map((product: any) => product.frontmatter.category).flat())];
+---
+
+<Layout><br>
+    <div class="container is-fluid">
+        <ProductView title="Categories">
+            <div>
+                {categories.map((category) => (
+                    <p><a href={`/categories/${category}`}>{category}</a></p>
+                ))}
+            </div>
+        </ProductView>
+    </div>
+</Layout>

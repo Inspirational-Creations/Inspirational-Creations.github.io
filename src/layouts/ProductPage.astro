@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.scss";
 ---
 
-<Layout>
+<Layout pageTitle={frontmatter.title}>
     <br>
     <div class="container">
         <div class="columns">
@@ -21,7 +21,9 @@ import "../styles/global.scss";
                             <h4 class="title is-size-5">{frontmatter.price}</h4>
                         </div>
                         <div class="level-item">
-                            <span class="tag is-primary is-medium">{frontmatter.category}</span>
+                            <a href=`../categories/${frontmatter.category}`>
+                                <span class="tag is-white is-medium">{frontmatter.category}</span>
+                            </a>
                         </div>
                     </div>
                 </nav>
