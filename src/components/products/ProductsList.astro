@@ -5,7 +5,6 @@ const products = Object.values(import.meta.glob('/src/pages/products/*.md', { ea
 ---
 {products.map(product => 
     <div class="cell">
-        <a href={product.url}><ProductCard frontmatter={product.frontmatter} /></a>
+        <a href={product.url} style="text-decoration: none"><ProductCard frontmatter={product.frontmatter} /></a>
     </div>
 )}
-

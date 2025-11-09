@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ProductView from "../../components/products/ProductView.astro";
+import CategoryButton from "../../components/CategoryButton.astro";
 
 const allProducts = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
 const categories = [...new Set(allProducts.map((product: any) => product.frontmatter.category).flat())];
@@ -9,11 +10,9 @@ const categories = [...new Set(allProducts.map((product: any) => product.frontma
 <Layout><br>
     <div class="container is-fluid">
         <ProductView title="Categories">
-            <div>
-                {categories.map((category) => (
-                    <p><a href={`/categories/${category}`}>{category}</a></p>
-                ))}
-            </div>
+                    {categories.map((category) => (
+                        <div class="cell"><CategoryButton category={category} /></div>
+                    ))}
         </ProductView>
     </div>
 </Layout>

@@ -4,7 +4,7 @@ title: "Sunflower Pillow"
 desc: "This finger-knit pillow is shaped like a sunflower!"
 price: "$1.00"
 image:
-    src: "https://inspirational-creations-9996.myshopify.com/cdn/shop/files/7402204321803101515.jpg?v=1762007754"
+    src: "/src/assets/products/sunflower-pillow.jpg"
     alt: "A wooden cutting board with the words \"Smoke Meat Everyday\" etched onto it."
 category: "Pillows"
 ---

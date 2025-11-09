@@ -1,0 +1,38 @@
+---
+const { frontmatter } = Astro.props;
+
+const renderImage = frontmatter.image == null ? "hidden" : "";
+const src = frontmatter.image == null ? "" : frontmatter.image.src;
+const alt = frontmatter.image == null ? "" : frontmatter.image.alt;
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <br>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column">
+                <div class="notification has-background-primary-soft">
+                    <div class="content">
+                        <h1 class="title">{frontmatter.title}</h1>
+                        <slot />
+                    </div>
+                </div>
+            </div>
+            <div class=`column is-one-third ${renderImage}`>
+                <img class="content-image" src={src} alt={alt} >
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .content-image {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .hidden {
+        display: none;
+    }
+</style>

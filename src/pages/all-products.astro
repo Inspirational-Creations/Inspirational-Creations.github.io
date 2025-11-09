@@ -4,14 +4,11 @@ import Layout from '../layouts/Layout.astro';
 import HeaderHero from '../components/HeaderHero.astro';
 import ProductsView from '../components/products/ProductView.astro'
 import ProductsList from '../components/products/ProductsList.astro';
-import HowToOrder from '../components/HowToOrder.astro';
 
 const pageTitle = "Inspirational Creations";
 ---
 
 <Layout pageTitle={pageTitle}>
-	<HeaderHero />
-	<HowToOrder />
 	<div class="container is-fluid">
 		<ProductsView title="View All Products">
 			<ProductsList />
