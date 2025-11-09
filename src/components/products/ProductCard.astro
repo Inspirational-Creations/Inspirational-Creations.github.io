@@ -1,12 +1,14 @@
 ---
 const { frontmatter } = Astro.props;
+
+const source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : `/product-imgs/${frontmatter.image.src}`;
 ---
 
 <div class="card">
     <div class="card-image">
         <figure class="image is-square">
         <img
-            src={frontmatter.image.src}
+            src={source}
             alt={frontmatter.image.alt}
         />
         </figure>

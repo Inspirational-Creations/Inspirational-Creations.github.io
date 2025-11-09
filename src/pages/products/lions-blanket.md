@@ -3,7 +3,7 @@ layout: "../../layouts/ProductPage.astro"
 title: "Lions Blanket"
 price: "$1.00"
 image:
-    src: "/src/assets/products/lions-blanket.jpg"
+    src: "lions-blanket.jpg"
     alt: "A finger-knit blanket in Lions colors."
 category: "Blankets"
 ---
