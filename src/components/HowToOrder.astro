@@ -1,0 +1,17 @@
+---
+// Import statement
+import * as HowToOrder from '../content/how-to-order.md';
+
+const Content = HowToOrder.Content;
+
+const title = HowToOrder.frontmatter.title == null ? HowToOrder.frontmatter.title : "How to Order";
+
+---
+<div class="container is-fluid" id={title}>
+    <div class="notification has-background-primary-soft">
+        <div class="content">
+            <h1>{title}</h1>
+            <Content />
+        </div>
+    </div>
+</div>

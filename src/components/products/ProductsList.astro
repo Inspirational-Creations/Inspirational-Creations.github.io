@@ -1,0 +1,10 @@
+---
+import ProductCard from "../../components/products/ProductCard.astro";
+
+const products = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
+---
+{products.map(product => 
+    <div class="cell">
+        <a href={product.url} style="text-decoration: none"><ProductCard frontmatter={product.frontmatter} /></a>
+    </div>
+)}

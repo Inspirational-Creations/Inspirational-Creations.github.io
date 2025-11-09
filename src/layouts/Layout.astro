@@ -1,3 +1,13 @@
+---
+import "/src/styles/global.scss";
+
+import Alert from "../components/Alert.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
+const { pageTitle } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +15,28 @@
 		<meta name="viewport" content="width=device-width" />
 		<!--  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
 		<meta name="generator" content={Astro.generator} />
-		<title>Inspirational Creations</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="not-footer">
+			<Alert />
+			<NavBar />
+			<slot />
+			<br>
+		</div>
+		<Footer />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
+	html, body {
 		height: 100%;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	.not-footer {
+		flex: 1 0 auto;
 	}
 </style>

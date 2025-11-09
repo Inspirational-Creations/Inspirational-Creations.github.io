@@ -1,0 +1,25 @@
+---
+const date = new Date()
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const year = date.getFullYear();
+const month = months[date.getMonth()];
+const day = date.getDay();
+---
+
+<footer class="footer" id="footer">
+    <div class="content has-text-centered">
+        <p>This website was last updated on {month} {day}, {year}.</p>
+        <p>
+            Website created by <a href="https://dawsoncall.com">Dawson Call</a>. 
+            The source code is available on <a href="https://github.com/Inspirational-Creations/Inspirational-Creations.github.io">GitHub</a>.
+        </p>
+    </div>
+</footer>
+
+<style>
+    #footer {
+        flex-shrink: 0;
+    }
+</style>

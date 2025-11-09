@@ -11,5 +11,8 @@
   "dependencies": {
     "astro": "^5.15.3",
     "bulma": "^1.0.4"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.93.3"
   }
 }

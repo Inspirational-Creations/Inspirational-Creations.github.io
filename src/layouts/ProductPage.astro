@@ -1,0 +1,43 @@
+---
+const { frontmatter } = Astro.props;
+
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.scss";
+---
+
+<Layout pageTitle={frontmatter.title}>
+    <br>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <img class="product-image" src={frontmatter.image.src} alt={frontmatter.image.alt}>
+            </div>
+            <div class="column">
+                <h1 class="title">{frontmatter.title}</h1>
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h4 class="title is-size-5">{frontmatter.price}</h4>
+                        </div>
+                        <div class="level-item">
+                            <a href=`../categories/${frontmatter.category}`>
+                                <span class="tag is-white is-medium">{frontmatter.category}</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <slot />
+                    <a class="button is-primary" href="/#How to Order">Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .product-image {
+        border-radius: 10px;
+    }
+</style>

@@ -1,0 +1,20 @@
+---
+const { title } = Astro.props;
+---
+<br>
+<div class="block" id={title}>
+    <div class="notification has-background-primary-soft product-view">
+        <h1 class="title has-text-centered">
+            {title}
+        </h1>
+        <div class="grid is-col-min-10">
+            <slot />
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-view {
+        border-radius: 10px;
+    }
+</style>

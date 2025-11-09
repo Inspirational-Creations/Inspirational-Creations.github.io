@@ -1,0 +1,61 @@
+---
+import logo from "../assets/Inspirational.webp";
+---
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation" id="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img height="300" src={logo.src} alt="Inspriational Creations logo">
+        </a>
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                Home
+            </a>
+            <a class="navbar-item" href="/all-products">
+                All Products
+            </a>
+            <a class="navbar-item" href="/categories">
+                Categories
+            </a>
+            <a class="navbar-item" href="/about-us">
+                About Us
+            </a>
+            <a class="navbar-item" href="/contact">
+                Contact
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+            });
+        });
+
+    });
+</script>
