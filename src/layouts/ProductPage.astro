@@ -8,28 +8,31 @@ import "../styles/global.scss";
 
 <Layout pageTitle={frontmatter.title}>
     <br>
-    <div class="container">
+    <div class="container is-fluid">
         <div class="columns">
             <div class="column">
                 <img class="product-image" src={frontmatter.image.src} alt={frontmatter.image.alt}>
             </div>
             <div class="column">
-                <h1 class="title">{frontmatter.title}</h1>
-                <nav class="level">
-                    <div class="level-left">
-                        <div class="level-item">
-                            <h4 class="title is-size-5">{frontmatter.price}</h4>
+                <div class="product-info">
+                    <h1 class="title">{frontmatter.title}</h1>
+                    <nav class="level is-mobile">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <h4 class="title is-size-5 price">{frontmatter.price}</h4>
+                                <a href=`../../categories/${frontmatter.category}`>
+                                    <span class="tag is-white is-medium">{frontmatter.category}</span>
+                                </a>
+                            </div>
+                            <div class="level-item subtitle">
+
+                            </div>
                         </div>
-                        <div class="level-item">
-                            <a href=`../categories/${frontmatter.category}`>
-                                <span class="tag is-white is-medium">{frontmatter.category}</span>
-                            </a>
-                        </div>
+                    </nav>
+                    <div class="content">
+                        <slot />
+                        <a class="button is-primary" href="/#How to Order">Order</a>
                     </div>
-                </nav>
-                <div class="content">
-                    <slot />
-                    <a class="button is-primary" href="/#How to Order">Order</a>
                 </div>
             </div>
         </div>
@@ -39,5 +42,12 @@ import "../styles/global.scss";
 <style>
     .product-image {
         border-radius: 10px;
+    }
+    .product-info {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .price {
+        margin-right: 15px;
     }
 </style>
