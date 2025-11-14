@@ -1,5 +1,5 @@
 ---
-If you're seeing this, then press ctrl + shift + v to open this page in preview mode.
+If you're seeing this, and you're viewing the file in VSCode, then press ctrl + shift + v to open this page in preview mode.
 That way, you can see all the actual formatting!
 ---
 
