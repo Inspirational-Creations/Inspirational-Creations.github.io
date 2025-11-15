@@ -27,7 +27,7 @@ For the purposes of what you're doing, there are only three different folders yo
 
 * The `src/pages` folder has files that define entire pages (such as the about page, or product pages).
 * The `src/content` folder has elements that are parts of pages, but not pages themselves (like the alert).
-* The `public` folder holds any images you want to reference.
+* The `public/assets` folder holds any images you want to reference.
 
 ## File Structure
 Any files you need to edit should be in the `.md` file format. 
