@@ -155,6 +155,7 @@ Inspirational Creations is a...
 ## Markdown Formatting
 Below is a list of common markdown formatting options. Everything described here works in the "body" section of all markdown files in this project.
 
+- New Lines: By default, Markdown will put text on two adjacent lines on the same line. If you want to create a new line, place an empty line in between the two lines.
 - *Italic text*: Wrap the text you want to be in italics in asterisks, \*like this\*.
 - **Bold text**: Wrap the text you want to be bold in two asterisks, \*\*like this\*\*.
     - You can also combine this and do bold and italics by using three sets of asterisks.
