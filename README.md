@@ -1,8 +1,3 @@
----
-If you're seeing this, then press ctrl + shift + v to open this page in preview mode.
-That way, you can see all the actual formatting!
----
-
 # Guide to Editing This Website
 
 If you're reading this, congratulatons! You (hopefully) got everything set up correctly, and now you can edit the site!
