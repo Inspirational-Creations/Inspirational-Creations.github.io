@@ -7,7 +7,7 @@ const allProducts = Object.values(import.meta.glob('/src/pages/products/*.md', {
 const categories = [...new Set(allProducts.map((product: any) => product.frontmatter.category).flat())];
 ---
 
-<Layout><br>
+<Layout pageTitle="Categories"><br>
     <div class="container is-fluid">
         <ProductView title="Categories">
                     {categories.map((category) => (

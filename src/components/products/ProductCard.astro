@@ -1,7 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 
-const source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : `/product-imgs/${frontmatter.image.src}`;
+const source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : `/assets/product-imgs/${frontmatter.image.src}`;
 ---
 
 <div class="card">

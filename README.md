@@ -1,11 +1,6 @@
----
-If you're seeing this, then press ctrl + shift + v to open this page in preview mode.
-That way, you can see all the actual formatting!
----
-
 # Guide to Editing This Website
 
-If you're reading this, congratulatons! You got everything set up correctly, and now you can edit the site!
+If you're reading this, congratulatons! You (hopefully) got everything set up correctly, and now you can edit the site!
 
 To make things easier, I have hidden most of the files, so you can only edit the ones that you actually need.
 
@@ -41,6 +36,7 @@ This is similar to a normal text file, but it has some additional formatting opt
 At the top of most of these files is an area known as the "frontmatter". 
 It contains information about the file which is used by the program in other places.
 Every property value should be in "quotation marks" unless I say otherwise.
+These values can also be listed in any order.
 
 Everything after the "frontmatter" is the body of the file.
 
@@ -84,10 +80,7 @@ category: "Other"
 ---
 Product description here
 ```
-
-## How to Edit Product Description
-Everything else in this file, below the dashed section, is the description of the product. It uses [Markdown formatting](https://www.markdownguide.org/), which you can learn about at that link. Basically it's just text with some extra features, like **text** *formatting*, links, lists, headers, etc.
-
+---
 ### Editing the Alert
 The **alert** is a banner that appears on top of all pages on the website.
 
@@ -111,9 +104,53 @@ brightness: "dark"
 ---
 Text goes here
 ```
+---
+### Editing the Hero
+The **hero** is the larger banner that appears at the top of the home page.
 
+#### Frontmatter
+* `size`: How much space the hero takes up. The options are "small" (default), "medium", or "large".
+* `title`: The title displayed in the hero
+* `subtitle`: The subtitle displayed in the hero
+
+#### Body
+Everything after the frontmatter will be shown below the title and subtitle inside the hero.
+
+#### Example
+```
+---
+size: "small"
+title: "Inspirational Creations"
+subtitle: "Hand-crafted products"
+---
+Additional content here (if needed)
+```
+---
 ### Content Pages
-Currently, content pages (such as the about page) are defined in Markdown, but not all of the work has been done so that other pages on the website update automatically when they are changed. This section will be updated with instructions once they are.
+Content pages are any pages which contain things other than products. For example, the "About Us" and "Contact" pages are considered content pages. Any content pages are automatically added to the navigation bar.
+
+#### Adding new Content Pages
+Create new content pages as `.md` files in `src/pages`. The name of the files corresponds with its URL (for example, `info.md` will be at `inspirationalcreations.net/info`).
+
+#### Frontmatter
+* `layout`: Do not change this value. It should be "/src/layouts/ContentPage.astro" for all content pages.
+* `title`: The title of the page. Shown at the top of the page, in the browser tab, and in the navbar
+* `image`: The image is defined similarly to product images, with `src` and `alt` sub-properties. If this property is present, it will be shown to the right of the content on desktop or underneath it on mobile. If you do not want there to be an image, remove this property.
+
+#### Content
+Anything below the frontmatter will be the content of the page.
+
+#### Example
+```
+---
+title: "About Us"
+image:
+    src: "https://media.licdn.com/dms/image/v2/C5603AQFEgAsvePUI1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516586889315?e=2147483647&v=beta&t=XWiaH_tinCRD38xz9nXIyolFFMF6pg32ucIB0B_NQYk"
+    alt: "A picture of Robin and Denise"
+layout: "/src/layouts/ContentPage.astro"
+---
+Inspirational Creations is a...
+```
 
 ## Markdown Formatting
 Below is a list of common markdown formatting options. Everything described here works in the "body" section of all markdown files in this project.

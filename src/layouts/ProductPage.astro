@@ -5,7 +5,9 @@ import Layout from "../layouts/Layout.astro";
 
 import "../styles/global.scss";
 
-const image_source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : `/product-imgs/${frontmatter.image.src}`;
+const local_image_prefix = "/assets/product-imgs/"
+
+const image_source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : local_image_prefix + frontmatter.image.src;
 ---
 
 <Layout pageTitle={frontmatter.title}>

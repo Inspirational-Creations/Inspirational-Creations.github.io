@@ -8,7 +8,7 @@ const alt = frontmatter.image == null ? "" : frontmatter.image.alt;
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout pageTitle={frontmatter.title}>
     <br>
     <div class="container is-fluid">
         <div class="columns">

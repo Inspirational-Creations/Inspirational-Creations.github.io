@@ -1,11 +1,19 @@
 ---
-const HeroTitle = "Inspirational Creations";
-const HeroSubtitle = "Hand-crafted products";
+// Import statement
+import * as HeaderHero from '../content/hero.md';
+
+const Content = HeaderHero.Content;
+
+const HeroTitle = HeaderHero.frontmatter.title;
+const HeroSubtitle = HeaderHero.frontmatter.subtitle;
+
+const HeroSizeClass = HeaderHero.frontmatter.size === "small" ? "" : "is-" + HeaderHero.frontmatter.size;
 ---
-<div class="hero is-primary">
+<div class=`hero is-primary ${HeroSizeClass}`>
     <div class="hero-body has-text-centered">
         <p class="title">{HeroTitle}</p>
         <p class="subtitle">{HeroSubtitle}</p>
+        <Content />
     </div>
 </div>
 <br>
