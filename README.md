@@ -63,7 +63,7 @@ Each product is defined as its own `.md` file. These are used to automatically c
 * `title`: The title of the product
 * `price`: The displayed price of the product. Put it in with a dollar sign and cent values for consistency.
 * `image`: This is the image that is displayed next to the product. (Currently, only one image is supported). This property has two *sub-properties*:
-    * `src`: This is how the program knows what image to use. If you simply put a file name (such as "product.jpg"), it will pull the file of that name from the `public/product-imgs/` folder. If you give it a link to an image (such as https://example.com/product.jpg), it will get the image from that URL.
+    * `src`: This is how the program knows what image to use. If you simply put a file name (such as "product.jpg"), it will pull the file of that name from the `public/product-imgs/` folder. If you give it a link to an image (such as https://example.com/product.jpg), it will get the image from that URL. Also, note that you can use any sized image you want, but it will be cropped to square in the product card. The full image *will* be shown on the product page.
     * `alt`: If the image cannot be displayed, this text will be displayed instead. It should describe what is in the image. This is useful in case the image can't load, or if a blind person who can't see the images uses the site.
 * `category`: Make this whatever you want. All products that have the same value for `category` will be automatically grouped together in a category page (so people can look at just tumblers, for example).
 
