@@ -8,10 +8,11 @@ The following is a guide intended for non-technical users about how to add and e
 
 ## Using Github and VSCode
 
-Editing this website requires using two pieces of software: [GitHub](https://github.com) and [Visual Studio Code](https://vscode.dev) (or VSCode for short). 
+Editing this website requires using two pieces of software: [GitHub](https://github.com) and [Visual Studio Code]([https://vscode.dev](https://code.visualstudio.com/)) (or VSCode for short). 
 GitHub keeps track of all the changes that are made to the site. 
 It keeps a record of everything you change, and it lets you easily download other's changes and upload your changes.
 VSCode is a bit like a text editor, but it has some extra features that make editing the pages easier.
+I would reccomend adding [this](https://files.catbox.moe/f2ru90.json) to your settings.json file to hide anything you don't need to edit. Press ctrl + shift + p in VSCode, then search for "Preferences: Open User Settings (JSON). Then add that to the file and save. This will hide all of the code files so you can focus on only the content.
 
 ## General Workflow
 
