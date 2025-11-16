@@ -8,7 +8,7 @@ The following is a guide intended for non-technical users about how to add and e
 
 ## Using Github and VSCode
 
-Editing this website requires using two pieces of software: [GitHub](https://github.com) and [Visual Studio Code]([https://vscode.dev](https://code.visualstudio.com/)) (or VSCode for short). 
+Editing this website requires using two pieces of software: [GitHub](https://github.com) and [Visual Studio Code](https://code.visualstudio.com/) (or VSCode for short). 
 GitHub keeps track of all the changes that are made to the site. 
 It keeps a record of everything you change, and it lets you easily download other's changes and upload your changes.
 VSCode is a bit like a text editor, but it has some extra features that make editing the pages easier.
