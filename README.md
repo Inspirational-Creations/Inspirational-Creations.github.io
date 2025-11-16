@@ -1,8 +1,10 @@
-# Guide to Editing This Website
+# About This Repo
 
-If you're reading this, congratulatons! You (hopefully) got everything set up correctly, and now you can edit the site!
+This is a catalogue website for my mom and aunt's business, [Inspirational Creations](https://inspirationalcreations.net). They wanted a website that could show all of the products they have for sale. I created a system using [Astro](https://astro.build) where Markdown files describing the products are automatically turned into product pages.
 
-To make things easier, I have hidden most of the files, so you can only edit the ones that you actually need.
+# How to Change the Site
+
+The following is a guide intended for non-technical users about how to add and edit content on this website.
 
 ## Using Github and VSCode
 
