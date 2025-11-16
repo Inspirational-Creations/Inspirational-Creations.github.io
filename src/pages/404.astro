@@ -1,0 +1,33 @@
+---
+import "/src/styles/global.scss";
+
+const pageTitle = "Error 404"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="icon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+        <div class="hero is-fullheight">
+            <div class="hero-head"></div>
+            <div class="hero-body">
+                <div class="container is-max-tablet has-text-centered">
+                    <div class="notification has-background-primary-soft">
+                        <h1 class="title">Error 404: Page not found</h1>
+                        <p>The URL you are trying to access does not exist.</p>
+                        <p>This is either because the URL was entered wrong, or there was a glitch in the website's code.</p>
+                        <p>If it's the second one, please send <a href="mailto:dawson@dawsoncall.com">the site admin</a> an email!</p><br>
+                        <a class="button is-primary" href="./">Return to Home Page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-foot"></div>
+        </div>
+	</body>
+</html>
