@@ -12,7 +12,7 @@ Editing this website requires using two pieces of software: [GitHub](https://git
 GitHub keeps track of all the changes that are made to the site. 
 It keeps a record of everything you change, and it lets you easily download other's changes and upload your changes.
 VSCode is a bit like a text editor, but it has some extra features that make editing the pages easier.
-I would reccomend adding [this](https://files.catbox.moe/f2ru90.json) to your settings.json file to hide anything you don't need to edit. Press ctrl + shift + p in VSCode, then search for "Preferences: Open User Settings (JSON). Then add that to the file and save. This will hide all of the code files so you can focus on only the content.
+I would reccomend adding [this](https://gist.github.com/GamingLizard9/3f079ca58c825d54f9f659762a13c0b9) to your settings.json file to hide anything you don't need to edit. Press ctrl + shift + p in VSCode, then search for "Preferences: Open User Settings (JSON). Then add that to the file and save. This will hide all of the code files so you can focus on only the content.
 
 ## General Workflow
 
