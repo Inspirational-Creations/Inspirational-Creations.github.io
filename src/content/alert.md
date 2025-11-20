@@ -6,4 +6,4 @@ visible: true
 hue: "red"
 brightness: "dark"
 ---
-All products are placeholders. 
+This website is still under construction. All products are placeholders. 
