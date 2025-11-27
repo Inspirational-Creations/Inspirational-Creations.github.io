@@ -6,6 +6,8 @@ This is a catalogue website for my mom and aunt's business, [Inspirational Creat
 
 The following is a guide intended for non-technical users about how to add and edit content on this website.
 
+If you'd prefer a video tutorial, there is one [here](https://youtu.be/bBRqrX15QwU).
+
 ## Using Github and VSCode
 
 Editing this website requires using two pieces of software: [GitHub](https://github.com) and [Visual Studio Code](https://code.visualstudio.com/) (or VSCode for short). 
