@@ -3,12 +3,10 @@ import ProductCard from "../../components/products/ProductCard.astro";
 
 const products = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
 ---
-<p class="subtitle has-text-centered">Products are coming soon!</p>
 
-<!-- Products was temporarily removed until information was obtained
+
 {products.map(product => 
     <div class="cell">
         <a href={product.url} style="text-decoration: none"><ProductCard frontmatter={product.frontmatter} /></a>
     </div>
 )}
--->

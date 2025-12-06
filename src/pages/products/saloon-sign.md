@@ -3,7 +3,7 @@ layout: "/src/layouts/ProductPage.astro"
 title: "Saloon Sign"
 price: "$1.00"
 image:
-    src: "saloon-sign.jpg"
+    src: "saloon-sign.webp"
     alt: "A saloon sign."
 category: "Wooden"
 ---

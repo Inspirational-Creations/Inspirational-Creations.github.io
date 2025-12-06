@@ -1,15 +1,28 @@
 ---
 const { frontmatter } = Astro.props;
 
-const source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : `/assets/product-imgs/${frontmatter.image.src}`;
+// Code to get the correct image
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const allImgs = import.meta.glob<{ default: ImageMetadata }>('../../assets/product-imgs/*.webp', { eager: true });
+const imgSrc = "../../assets/product-imgs/" + frontmatter.image.src;
+
+if (!allImgs[imgSrc]) {
+  console.error(`Image not found: ${imgSrc}`);
+}
+
+const imageMetadata = allImgs[imgSrc];
 ---
 
 <div class="card">
     <div class="card-image">
         <figure class="image is-square">
-        <img
-            src={source}
+        <Image
+            src={imageMetadata.default}
             alt={frontmatter.image.alt}
+            inferSize={true}
+            layout='constrained'
         />
         </figure>
     </div>

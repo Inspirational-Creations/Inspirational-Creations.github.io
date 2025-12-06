@@ -5,9 +5,18 @@ import Layout from "../layouts/Layout.astro";
 
 import "../styles/global.scss";
 
-const local_image_prefix = "/assets/product-imgs/"
+// Code to get the correct image
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
-const image_source = (frontmatter.image.src.includes("/")) ? frontmatter.image.src : local_image_prefix + frontmatter.image.src;
+const allImgs = import.meta.glob<{ default: ImageMetadata }>('../assets/product-imgs/*.webp', { eager: true });
+const imgSrc = "../assets/product-imgs/" + frontmatter.image.src;
+
+if (!allImgs[imgSrc]) {
+  console.error(`Image not found: ${imgSrc}`);
+}
+
+const imageMetadata = allImgs[imgSrc];
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -15,7 +24,11 @@ const image_source = (frontmatter.image.src.includes("/")) ? frontmatter.image.s
     <div class="container is-fluid">
         <div class="columns">
             <div class="column">
-                <img class="product-image" src={image_source} alt={frontmatter.image.alt}>
+                <Image
+                    src={imageMetadata.default}
+                    alt={frontmatter.image.alt}
+                    inferSize={true}
+                />
             </div>
             <div class="column">
                 <div class="product-info">

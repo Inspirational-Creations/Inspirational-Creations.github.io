@@ -1,8 +1,10 @@
 $sunflower-yellow: #f4d74c;
 $purple: #be25e8;
+$lighter-blue: #adb7ff;
 
 /* Import bulma with customized color */
 @use "bulma/sass" with (
   $primary: $sunflower-yellow,
-  $warning: $purple
+  $warning: $purple,
+  $link: $lighter-blue
 );

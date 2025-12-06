@@ -3,7 +3,7 @@ layout: "/src/layouts/ProductPage.astro"
 title: "Laser-Cut Wooden Cutting Board"
 price: "$1.00"
 image:
-    src: "cutting-board.jpg"
+    src: "cutting-board.webp"
     alt: "A wooden cutting board with the words \"Smoke Meat Everyday\" etched onto it."
 category: "Wooden"
 ---
