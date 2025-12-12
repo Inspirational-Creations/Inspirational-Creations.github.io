@@ -1,11 +1,21 @@
 ---
 const { frontmatter } = Astro.props;
 
-const renderImage = frontmatter.image == null ? "hidden" : "";
-const src = frontmatter.image == null ? "" : frontmatter.image.src;
-const alt = frontmatter.image == null ? "" : frontmatter.image.alt;
-
 import Layout from '../layouts/Layout.astro';
+
+const renderImage = frontmatter.image == null ? "hidden" : "";
+
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const allImgs = import.meta.glob<{ default: ImageMetadata }>('../assets/*.webp', { eager: true });
+const imgSrc = "../assets/" + frontmatter.image.src;
+
+if (!allImgs[imgSrc]) {
+  console.error(`Image not found: ${imgSrc}`);
+}
+
+const imageMetadata = allImgs[imgSrc];
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -21,7 +31,12 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
             <div class=`column is-one-third ${renderImage}`>
-                <img class="content-image" src={src} alt={alt} >
+                <Image
+                    class="content-image"
+                    src={imageMetadata.default}
+                    alt={frontmatter.image.alt}
+                    inferSize={true}
+                />
             </div>
         </div>
     </div>

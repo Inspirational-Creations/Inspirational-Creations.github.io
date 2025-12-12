@@ -1,7 +1,7 @@
 ---
 title: "About Us"
 image:
-    src: "../src/assets/robin-and-denise.webp"
+    src: "robin-and-denise.webp"
     alt: "A picture of Robin and Denise"
 # ------
 # Do not edit anything below this line!

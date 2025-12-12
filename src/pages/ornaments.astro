@@ -9,10 +9,10 @@ import type { ImageMetadata } from 'astro';
 import instructions from '../assets/ornaments/ornament-instructions.png';
 const instructionsTranscribed = "DIY POP OUT ORNAMENT KIT INSTURCTIONS\n\n1. PAINT THE FRAME\nTo help from having tiny pieces to hold, paint your design right inside the frame! Use your brush to paint the sections to your liking but remember light coats work best! These small projects don't use a lot of paint and feel free to get creative adding dots and stripes if you choose!\n\n2. POP YOUR PIECES OUT\nJust like the old school pop-out kits! Gently apply pressure to each piece to pop it from the frame. If you need help on smaller pieces use the back end of your blue paint brush to help push. *If a piece should snap don't stress - they easily glue in place when you put it on your ornament base*\n\n3. GLUE IT ALL TOGETHER\nIt doesn\’t take much glue to hold these together! Put a few drops on the back of your 3D pieces and press down. If some glue seeps out you can wipe it up with your paint brush or just let it dry - it will dry clear. Give it a few minutes to set before adding your hanger so pieces don't shift while you're handling it.\n\n4. ADD YOUR HANGER, BEAD + BOW\nTie your jute in a loop on one end. On the doubled over side of your loop string on your bead. Slide the bead up close to the knot and then slide the jute loop into your ornament.\nWrap the doubled over end over your knot and bead but before pulling tight slide your ribbon into the loop your ornament runs through then pull the jute tight and slide the bead down to secure ribbon in place."
 
-const rawImgs = import.meta.glob<{ default: ImageMetadata }>('../../src/assets/ornaments/*.jpg', { eager: true });
+const rawImgs = import.meta.glob<{ default: ImageMetadata }>('../../src/assets/ornaments/*.webp', { eager: true });
 const ornamentImgs = Object.values(rawImgs).map(image => image.default);
 
-// TO ADD ORNAMENTS: Add .jpg files to "src/assets/ornaments". They need to be .jpg's.
+// TO ADD ORNAMENTS: Add .webp files to "src/assets/ornaments". They need to be .webp's.
 ---
 
 <Layout pageTitle={pageTitle}><br>
