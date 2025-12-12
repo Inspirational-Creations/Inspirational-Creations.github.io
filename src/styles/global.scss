@@ -6,5 +6,6 @@ $lighter-blue: #adb7ff;
 @use "bulma/sass" with (
   $primary: $sunflower-yellow,
   $warning: $purple,
-  $link: $lighter-blue
+  $link: $lighter-blue,
+  $notification-radius: 10px
 );
