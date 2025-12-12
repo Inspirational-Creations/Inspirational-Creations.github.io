@@ -10,7 +10,7 @@ import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
 const allImgs = import.meta.glob<{ default: ImageMetadata }>('../assets/product-imgs/*.webp', { eager: true });
-const imgSrc = "../assets/product-imgs" + frontmatter.image.src;
+const imgSrc = "../assets/product-imgs/" + frontmatter.image.src;
 
 if (!allImgs[imgSrc]) {
   console.error(`Image not found: ${imgSrc}`);
