@@ -1,21 +1,23 @@
 ---
+// Necessary imports
 const { frontmatter } = Astro.props;
 
 import Layout from '../layouts/Layout.astro';
 
-const renderImage = frontmatter.image == null ? "hidden" : "";
-
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
+// Get all of the images from the directory
 const allImgs = import.meta.glob<{ default: ImageMetadata }>('../assets/*.webp', { eager: true });
-const imgSrc = "../assets/" + frontmatter.image.src;
 
-if (!allImgs[imgSrc]) {
+// Get the image if it exists
+let imgSrc = frontmatter.image?.src ? "../assets/" + frontmatter.image.src : null;
+let imageMetadata = imgSrc ? allImgs[imgSrc] : null;
+
+// Give an error if it doesn't exist
+if (imgSrc && !imageMetadata) {
   console.error(`Image not found: ${imgSrc}`);
 }
-
-const imageMetadata = allImgs[imgSrc];
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -30,14 +32,16 @@ const imageMetadata = allImgs[imgSrc];
                     </div>
                 </div>
             </div>
-            <div class=`column is-one-third ${renderImage}`>
+            {imageMetadata ? (
+              <div class="column is-one-third">
                 <Image
                     class="content-image"
                     src={imageMetadata.default}
-                    alt={frontmatter.image.alt}
+                    alt={frontmatter.image.alt || 'Image'}
                     inferSize={true}
                 />
-            </div>
+              </div>
+            ) : null}
         </div>
     </div>
 </Layout>
@@ -46,8 +50,5 @@ const imageMetadata = allImgs[imgSrc];
     .content-image {
         border-radius: 10px;
         object-fit: cover;
-    }
-    .hidden {
-        display: none;
     }
 </style>
