@@ -11,5 +11,5 @@ These trees work great as decorations for anyone wanting an earthy or hand-craft
 
 This 2 foot tall version is great for people who want a simpler design or are short on space. 
 
-These trees are also available in [3 feet](./wooden-christmas-tree-3ft) and [6 feet](./wooden-christmas-tree-6ft) tall variants.
+These trees are also available in [3 feet](/products/wooden-christmas-tree-3ft) and [6 feet](/products/wooden-christmas-tree-6ft) tall variants.
 

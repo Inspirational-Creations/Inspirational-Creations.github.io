@@ -15,5 +15,5 @@ An alternative design is also available:
 
 <img src="../../assets/product-page-imgs/wooden-tree-3ft-alt.webp" width="400px" style="border-radius:10px" alt="An alternative design for the wooden tree. It is painted green, has no lights, and has a snowflake at its base.">
 
-These trees are also available in [2 feet](./wooden-christmas-tree-2ft) and [6 feet](./wooden-christmas-tree-6ft) tall variants.
+These trees are also available in [2 feet](/products/wooden-christmas-tree-2ft) and [6 feet](/products/wooden-christmas-tree-6ft) tall variants.
 

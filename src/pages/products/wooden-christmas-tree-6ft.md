@@ -15,5 +15,5 @@ An alternative design is also available:
 
 <img src="../../assets/product-page-imgs/wooden-tree-6ft-alt.webp" width="400px" style="border-radius:10px" alt="An alternative design for the wooden tree. It adds hanging snowflakes, but removes the lights.">
 
-These trees are also available in [2 feet](./wooden-christmas-tree-2ft) and [3 feet](./wooden-christmas-tree-3ft) tall variants.
+These trees are also available in [2 feet](/products/wooden-christmas-tree-2ft) and [3 feet](/products/wooden-christmas-tree-3ft) tall variants.
 
