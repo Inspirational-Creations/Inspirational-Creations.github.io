@@ -1,0 +1,12 @@
+---
+import ProductView from "./products/ProductView.astro";
+import CategoryButton from "./CategoryButton.astro";
+
+const allProducts = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
+const categories = [...new Set(allProducts.map((product: any) => product.frontmatter.category).flat())];
+---
+<ProductView title="Categories">
+            {categories.map((category) => (
+                <div class="cell"><CategoryButton category={category} /></div>
+            ))}
+</ProductView>
