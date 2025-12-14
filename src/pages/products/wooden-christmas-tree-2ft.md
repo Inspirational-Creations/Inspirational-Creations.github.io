@@ -5,7 +5,7 @@ price: "$35.00"
 image:
     src: "wooden-tree-2ft.webp"
     alt: "A flat wooden structure in the shape of a christmas tree. It has an ornament hanging from the top, and a wreath at the bottom."
-category: "Chirstmas"
+category: "Christmas"
 ---
 These trees work great as decorations for anyone wanting an earthy or hand-crafted vibe.  They are hand-made from pieces of pieces of wood, and have a themed centerpiece in the base.
 

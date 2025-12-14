@@ -5,7 +5,7 @@ price: "$10.00"
 image:
     src: "ornament-collage.webp"
     alt: "A collage of some example ornament designs available for purchase."
-category: "Chirstmas"
+category: "Christmas"
 ---
 These custom-made wooden ornaments are like our other ornaments, but you can put them together yourself! They come with everything you need, including multiple perforated wooden pieces, paint brushes, and multiple colors of paint. Simply paint the pieces on the wooden sheet, pop them out, and glue them together! These ornaments make great family activites, or great gifts for people who appreciate a personal touch.
 

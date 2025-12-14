@@ -5,7 +5,7 @@ price: "$89.00"
 image:
     src: "wooden-tree-6ft.webp"
     alt: "A tall christmas tree structure made out of wood. It has LED lights on it, and a small winter-themed tree at its base."
-category: "Chirstmas"
+category: "Christmas"
 ---
 These trees work great as decorations for anyone wanting an earthy or hand-crafted vibe. They are hand-made from pieces of pieces of wood, and have a themed centerpiece in the base.
 
