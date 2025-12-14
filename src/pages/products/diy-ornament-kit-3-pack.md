@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/ProductPage.astro"
 title: "DIY Ornament Kit (3 Pack)"
-price: "$25.00"
+price: "$25"
 image:
     src: "ornament-collage.webp"
     alt: "A collage of some example ornament designs available for purchase."

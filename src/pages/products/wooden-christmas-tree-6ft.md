@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/ProductPage.astro"
 title: "Wooden Christmas Tree (6 feet)"
-price: "$89.00"
+price: "$89"
 image:
     src: "wooden-tree-6ft.webp"
     alt: "A tall christmas tree structure made out of wood. It has LED lights on it, and a small winter-themed tree at its base."

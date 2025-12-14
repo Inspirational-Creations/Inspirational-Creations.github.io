@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/ProductPage.astro"
 title: "Wooden Christmas Tree (2 feet)"
-price: "$35.00"
+price: "$35"
 image:
     src: "wooden-tree-2ft.webp"
     alt: "A flat wooden structure in the shape of a christmas tree. It has an ornament hanging from the top, and a wreath at the bottom."

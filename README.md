@@ -77,7 +77,7 @@ Everything after the frontmatter is the product description. This will only appe
 ---
 layout: "../../layouts/ProductPage.astro"
 title: "Example Product"
-price: "$999.00"
+price: "$999"
 image:
     src: "tumbler.jpg"
     alt: "A metal tumbler. It has a pink-to-blue gradient."

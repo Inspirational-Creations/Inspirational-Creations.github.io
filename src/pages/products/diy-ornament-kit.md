@@ -1,9 +1,9 @@
 ---
 layout: "/src/layouts/ProductPage.astro"
 title: "DIY Ornament Kit"
-price: "$10.00"
+price: "$10"
 image:
-    src: "ornament-collage.webp"
+    src: "ornament-single.webp"
     alt: "A collage of some example ornament designs available for purchase."
 category: "Christmas"
 ---

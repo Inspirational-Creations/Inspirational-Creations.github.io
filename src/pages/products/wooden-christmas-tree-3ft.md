@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/ProductPage.astro"
 title: "Wooden Christmas Tree (3 feet)"
-price: "$59.00"
+price: "$59"
 image:
     src: "wooden-tree-3ft.webp"
     alt: "A christmas tree structure created out of pieces of unpainted wood. An LED light strip adorns the sides. At the base of the tree, in the middle, is a wreath with more lights and a candle."
