@@ -13,9 +13,15 @@ const pageTitle = "Inspirational Creations";
 <Layout pageTitle={pageTitle}>
 	<HeaderHero />
 	<div class="container is-fluid">
-		<CategoryList title="Categories" />
+		<div class="columns">
+			<div class="column is-two-thirds">
+				<CategoryList title="Categories" />
+			</div>
+			<div class="column">
+				<HowToOrder />
+			</div>
+		</div>
 	</div><br>
-	<HowToOrder />
 	<div class="container is-fluid">
 		<ProductsView title="View All Products">
 			<ProductsList />
