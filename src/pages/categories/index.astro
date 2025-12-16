@@ -1,10 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import CategoryList from "../../components/CategoryList.astro";
+
+const categoryDesc = "Here you can view all of the products by what \"category\" they have been tagged under. For example, the category \"Wooden\" has products made of wood, the \"Christmas\" category is Christmas-related items, etc."
 ---
 
 <Layout pageTitle="Categories"><br>
     <div class="container is-fluid">
-        <CategoryList />
+        <CategoryList title="Categories" desc={categoryDesc}/>
     </div>
 </Layout>

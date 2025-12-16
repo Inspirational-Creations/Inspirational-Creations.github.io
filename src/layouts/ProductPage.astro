@@ -33,23 +33,25 @@ const imageMetadata = allImgs[imgSrc];
             </div>
             <div class="column">
                 <div class="product-info">
-                    <h1 class="title">{frontmatter.title}</h1>
-                    <nav class="level is-mobile">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <h4 class="title is-size-5 price">{frontmatter.price}</h4>
-                                <a href=`../../categories/${frontmatter.category}`>
-                                    <span class="tag has-background-primary-soft has-text-primary-bold is-medium">{frontmatter.category}</span>
-                                </a>
-                            </div>
-                            <div class="level-item subtitle">
+                    <div class="notification has-background-primary-soft">
+                        <h1 class="title">{frontmatter.title}</h1>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <h4 class="title is-size-5 price">{frontmatter.price}</h4>
+                                    <a href=`../../categories/${frontmatter.category}`>
+                                        <span class="tag has-background-primary-bold has-text-primary-soft is-medium">{frontmatter.category}</span>
+                                    </a>
+                                </div>
+                                <div class="level-item subtitle">
 
+                                </div>
                             </div>
+                        </nav>
+                        <div class="content">
+                            <slot />
+                            <a class="button is-primary" href="/#How to Order">Order</a>
                         </div>
-                    </nav>
-                    <div class="content">
-                        <slot />
-                        <a class="button is-primary" href="/#How to Order">Order</a>
                     </div>
                 </div>
             </div>
