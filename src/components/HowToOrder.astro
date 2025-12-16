@@ -9,9 +9,11 @@ const title = HowToOrder.frontmatter.title == null ? HowToOrder.frontmatter.titl
 ---
 <div class="container is-fluid" id={title}>
     <div class="notification has-background-primary-soft">
-        <div class="content">
-            <h1>{title}</h1>
-            <Content />
+        <div style="text-align: center;">
+            <h1 class="title">{title}</h1>
+            <div class="content">
+                <Content />
+            </div>
         </div>
     </div>
 </div>
