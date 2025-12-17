@@ -1,7 +1,28 @@
 ---
 import ProductCard from "../../components/products/ProductCard.astro";
 
-const products = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
+// Gets all the products as md files
+const allProducts = Object.values(import.meta.glob('/src/pages/products/*.md', { eager: true }));
+
+// Gets the current date (to filter seasonal products)
+const buildDate = new Date();
+const buildMonth = buildDate.getMonth();
+const buildDay = buildDate.getDate();
+
+// Determines if it is one of the seasons
+const isChristmasTime = (buildMonth == 10 || (buildMonth == 11 && buildDay <= 25));
+
+// Creates a filtered list of products
+const products = allProducts.filter((product) => {
+
+    // Adds Christmas products, only if it is Christmas season
+    if (product.frontmatter.category === "Christmas") {
+        return isChristmasTime;
+    }
+
+    // Always show the product if it is not seasons
+    return true;
+});
 ---
 
 

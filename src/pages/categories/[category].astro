@@ -24,7 +24,7 @@ const { category } = Astro.params;
 const { products } = Astro.props;
 ---
 <Layout pageTitle={category}>
-  <div class="container is-fluid">
+  <div class="container is-fluid"><br>
     <ProductView title=`All products in the category: ${category}` desc="You can use the 'Categories' button in the navbar to return to the list of categories.">
       {products.map((product: any) => 
         <div class="cell">
